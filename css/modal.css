@@ -1,0 +1,186 @@
+/* Overlay that covers the entire viewport */
+.productivity-reminder-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2147483647; /* Maximum z-index to ensure it's on top */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Modal container */
+.productivity-reminder-modal {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  max-width: 450px;
+  padding: 32px;
+  text-align: center;
+  transform: translateY(20px);
+  animation: slideUp 0.4s ease-out 0.1s forwards;
+  overflow: hidden;
+}
+
+/* Modal header */
+.productivity-reminder-modal h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333333;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Modal content */
+.productivity-reminder-modal p {
+  margin: 16px 0;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Time wasted counter */
+.productivity-reminder-modal .time-counter {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin: 24px 0;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* Button container */
+.productivity-reminder-modal .button-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+/* Button styling */
+.productivity-reminder-modal button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  max-width: 180px;
+}
+
+/* Primary action button (Continue anyway) */
+.productivity-reminder-modal .continue-btn {
+  background-color: white;
+  color: #333333;
+  border: 1px solid #cccccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.productivity-reminder-modal .continue-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.productivity-reminder-modal .continue-btn:active {
+  transform: translateY(0);
+}
+
+/* Secondary action button (Back to work) */
+.productivity-reminder-modal .back-to-work-btn {
+  background-color: #333333;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-2px);
+}
+
+.productivity-reminder-modal .back-to-work-btn:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.productivity-reminder-modal .back-to-work-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animation for overlay appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for modal appearance */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+  .productivity-reminder-modal {
+    width: 85%;
+    padding: 24px;
+  }
+
+  .productivity-reminder-modal h2 {
+    font-size: 22px;
+  }
+
+  .productivity-reminder-modal p {
+    font-size: 15px;
+  }
+
+  .productivity-reminder-modal .time-counter {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+
+  .productivity-reminder-modal button {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+
+  .productivity-reminder-modal .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productivity-reminder-modal button {
+    max-width: 100%;
+    width: 100%;
+  }
+}

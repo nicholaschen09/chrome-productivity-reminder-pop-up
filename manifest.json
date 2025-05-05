@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity Reminder",
+  "version": "1.0.0",
+  "description": "Shows a reminder popup when you visit distracting websites like TikTok, YouTube, or Instagram",
+  "permissions": [],
+  "host_permissions": [
+    "*://*.tiktok.com/*",
+    "*://*.youtube.com/*",
+    "*://*.instagram.com/*",
+    "*://*.facebook.com/*",
+    "*://*.twitter.com/*",
+    "*://*.reddit.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.tiktok.com/*",
+        "*://*.youtube.com/*",
+        "*://*.instagram.com/*",
+        "*://*.facebook.com/*",
+        "*://*.twitter.com/*",
+        "*://*.reddit.com/*"
+      ],
+      "js": ["script/contentScript.js"],
+      "css": ["css/modal.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
