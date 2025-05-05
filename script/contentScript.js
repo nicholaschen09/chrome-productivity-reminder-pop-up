@@ -82,6 +82,7 @@ class ProductivityReminder {
 
     // Create buttons container
     const buttonsContainer = document.createElement("div");
+    buttonsContainer.className = "button-container";
 
     // Continue anyway button
     const continueButton = document.createElement("button");
