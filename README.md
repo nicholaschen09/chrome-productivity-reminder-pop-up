@@ -1,6 +1,6 @@
 # Productivity Reminder - Chrome Extension
 
-A Chrome extension that helps you stay focused by showing a reminder popup when you visit distracting websites like YouTube, TikTok, Instagram, and more.
+A Chrome extension that helps you stay focused by showing a reminder popup when you visit distracting websites like YouTube, TikTok, Instagram
 
 ## Features
 
