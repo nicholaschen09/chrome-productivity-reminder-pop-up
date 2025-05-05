@@ -7,7 +7,7 @@ A Chrome extension that helps you stay focused by showing a reminder popup when 
 - Displays a centered popup reminder when you visit distracting websites
 - Tracks and shows time spent on these websites
 - Gives you the option to continue or redirect to a productivity site
-- Works on multiple distracting platforms (YouTube, TikTok, Instagram, Facebook, Twitter, Reddit)
+- Works on multiple distracting platforms (YouTube, TikTok, Instagram)
 - Responsive design that works on all screen sizes
 - Shows each reminder only once per session per site (won't keep annoying you)
 
@@ -43,9 +43,6 @@ const distractingSites = {
   "tiktok.com": "TikTok",
   "youtube.com": "YouTube",
   "instagram.com": "Instagram",
-  "facebook.com": "Facebook",
-  "twitter.com": "Twitter",
-  "reddit.com": "Reddit",
 };
 ```
 

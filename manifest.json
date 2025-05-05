@@ -7,20 +7,14 @@
   "host_permissions": [
     "*://*.tiktok.com/*",
     "*://*.youtube.com/*",
-    "*://*.instagram.com/*",
-    "*://*.facebook.com/*",
-    "*://*.twitter.com/*",
-    "*://*.reddit.com/*"
+    "*://*.instagram.com/*"
   ],
   "content_scripts": [
     {
       "matches": [
         "*://*.tiktok.com/*",
         "*://*.youtube.com/*",
-        "*://*.instagram.com/*",
-        "*://*.facebook.com/*",
-        "*://*.twitter.com/*",
-        "*://*.reddit.com/*"
+        "*://*.instagram.com/*"
       ],
       "js": ["script/contentScript.js"],
       "css": ["css/modal.css"],

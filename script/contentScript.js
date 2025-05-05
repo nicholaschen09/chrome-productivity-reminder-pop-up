@@ -3,9 +3,6 @@ const distractingSites = {
   "tiktok.com": "TikTok",
   "youtube.com": "YouTube",
   "instagram.com": "Instagram",
-  "facebook.com": "Facebook",
-  "twitter.com": "Twitter",
-  "reddit.com": "Reddit",
 };
 
 // Class to handle the productivity reminder functionality
@@ -28,22 +25,22 @@ class ProductivityReminder {
   init() {
     // Only proceed if we're on a distracting site
     if (this.currentSite) {
-      // Check if we've already shown a modal for this site in this session
-      const sessionKey = `productivity_reminder_shown_${window.location.hostname}`;
-      this.hasShownModal = sessionStorage.getItem(sessionKey) === "true";
+      // Remove the session storage check so modal appears on every page load
 
-      if (!this.hasShownModal) {
-        // Show the modal after a short delay
-        setTimeout(() => {
-          this.createModal();
-          sessionStorage.setItem(sessionKey, "true");
-          this.hasShownModal = true;
-        }, 1500);
-      }
+      // Show the modal after a short delay
+      setTimeout(() => {
+        this.createModal();
+      }, 1500);
 
       // Start tracking time spent
       this.startTimeTracking();
     }
+  }
+
+  // Remove the modal from the page
+  dismissModal(overlay) {
+    document.body.removeChild(overlay);
+    // No need to store in session storage
   }
 
   // Determine which distracting site we're on, if any
