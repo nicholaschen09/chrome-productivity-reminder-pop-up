@@ -40,12 +40,12 @@ To customize the list of websites that trigger the reminder:
 
 ```javascript
 const distractingSites = {
-  'tiktok.com': 'TikTok',
-  'youtube.com': 'YouTube',
-  'instagram.com': 'Instagram',
-  'facebook.com': 'Facebook',
-  'twitter.com': 'Twitter',
-  'reddit.com': 'Reddit'
+  "tiktok.com": "TikTok",
+  "youtube.com": "YouTube",
+  "instagram.com": "Instagram",
+  "facebook.com": "Facebook",
+  "twitter.com": "Twitter",
+  "reddit.com": "Reddit",
 };
 ```
 
@@ -61,11 +61,10 @@ To change where the "Back to work" button redirects:
 
 ```javascript
 const productivitySites = [
-  'https://www.google.com',
-  'https://calendar.google.com',
-  'https://www.notion.so',
-  'https://trello.com',
-  'https://todoist.com'
+  "https://www.karanpratapsingh.com/courses/system-design",
+  "https://www.google.com",
+  "https://learn.uwaterloo.ca",
+  "https://github.com",
 ];
 ```
 
@@ -102,4 +101,3 @@ If the extension doesn't work:
 ## License
 
 This project is for personal use. Feel free to modify it for your own needs.
-
